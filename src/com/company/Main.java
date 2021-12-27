@@ -92,18 +92,43 @@ public class Main {
 //
 //        System.out.println(Arrays.toString(num));
 
-        FileWriter fileWriter = new FileWriter("txt.txt");
+//        FileWriter fileWriter = new FileWriter("txt.txt");
+//
+//
+//        for (int i = 65; i<91;i++){
+//            fileWriter.write(i);
+//        }
+//
+//        for (int i = 0; i<10;i++){
+//            fileWriter.write(i + "");
+//        }
+//        fileWriter.close();
+//
+//    }
+
+        String[] a = new String[1];
+        System.out.println(Arrays.toString(a));
+        try {
+            int[] ar = new int[10];
+            System.out.println("Creat error " + ar[11]);
+        } catch (Exception ex) {
+            System.out.println("Ошибка " + ex);
+        }
+//        finally {
+//            System.out.println("It works");
+//        }
 
 
-        for (int i = 65; i<91;i++){
-            fileWriter.write(i);
+        while(true){
+            Scanner scn = new Scanner(System.in);
+            System.out.println("Enter a number ");
+            int b = scn.nextInt();
+            if (b%2!=0) {
+                    throw new Error("The error hapend because of prohibited odd number");
+            }else System.out.println(b);;
         }
 
-        for (int i = 0; i<10;i++){
-            fileWriter.write(i + "");
-        }
-        fileWriter.close();
+
 
     }
-
 }
